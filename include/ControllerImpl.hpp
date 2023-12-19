@@ -1,6 +1,7 @@
 #ifndef CONTROLLER_IMPL_HPP_
 #define CONTROLLER_IMPL_HPP_
 #include "Controller.hpp"
+#include "Canvas.hpp"
 
 namespace scs {
     class ControllerImpl : public Controller {

@@ -2,8 +2,6 @@
 
 scs::ControllerImpl::ControllerImpl() {}
 
-scs::ControllerImpl::~ControllerImpl() {}
-
 void scs::ControllerImpl::onDrawCanvas(sf::RenderWindow* window, scs::Canvas c, sf::Time deltaTime) {
     doUpdateObjects(c, deltaTime);
     doRenderObjects(window, c);
