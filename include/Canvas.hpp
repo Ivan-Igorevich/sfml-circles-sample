@@ -2,11 +2,12 @@
 #define CANVAS_HPP_
 #include <SFML/Graphics.hpp>
 #include <SFML/System/Clock.hpp>
-#include <iostream>
 #include "../include/ControllerImpl.hpp"
 
 namespace scs
 {
+    class Controller;
+
     class Canvas
     {
     private:
@@ -15,12 +16,13 @@ namespace scs
         sf::Clock localTimer;
         scs::Controller* controller;
 
-        Canvas(sf::RenderWindow* window);
+        explicit Canvas(sf::RenderWindow* window);
 
-        int getLeft();
-        int getRight();
-        int getTop();
-        int getBottom();
+        static int getLeft();
+        int getRight() const;
+
+        static int getTop();
+        int getBottom() const;
     };
 } // namespace scs
 

@@ -6,7 +6,7 @@
 
 namespace scs
 {
-    class Ball : public Sprite
+    class Ball final : public Sprite
     {
         std::random_device rd{};
         std::mt19937 gen{rd()};
@@ -19,10 +19,10 @@ namespace scs
 
     public:
         Ball();
-        Ball(int x, int y);
+        Ball(float x, float y);
 
-        virtual void onUpdate(scs::Canvas c, sf::Time deltaTime) override;
-        virtual void onRender(sf::RenderWindow* window, scs::Canvas c) override;
+        void onUpdate(scs::Canvas canvas, sf::Time deltaTime) override;
+        void onRender(sf::RenderWindow* window, scs::Canvas c) override;
 
     };
 }

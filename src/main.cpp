@@ -28,7 +28,7 @@ scs::Canvas::Canvas(sf::RenderWindow* window) : parent(window) {
     controller = new ControllerImpl();
 }
 int scs::Canvas::getLeft()  { return 0; }
-int scs::Canvas::getRight() { return parent->getSize().x - 1; }
+int scs::Canvas::getRight() const { return parent->getSize().x - 1; }
 int scs::Canvas::getTop() { return 0; }
-int scs::Canvas::getBottom() { return parent->getSize().y - 1; }
+int scs::Canvas::getBottom() const { return parent->getSize().y - 1; }
 

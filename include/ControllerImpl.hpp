@@ -4,10 +4,11 @@
 #include "Canvas.hpp"
 
 namespace scs {
-    class ControllerImpl : public Controller {
-    private:
-        void doUpdateObjects(scs::Canvas c, sf::Time deltaTime);
-        void doRenderObjects(sf::RenderWindow* window, scs::Canvas c);
+    class ControllerImpl final : public Controller {
+        static void doUpdateObjects(scs::Canvas c, sf::Time deltaTime);
+
+        static void doRenderObjects(sf::RenderWindow* window, scs::Canvas c);
+
     public:
         ControllerImpl();
         void onDrawCanvas(sf::RenderWindow* window, scs::Canvas c, sf::Time deltaTime) override;

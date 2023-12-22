@@ -7,25 +7,25 @@ namespace scs
     class Sprite : public scs::GameObject
     {
     protected:
-        float x;
-        float y;
-        float halfWidth;
-        float halfHeight;
+        float x{};
+        float y{};
+        float halfWidth{};
+        float halfHeight{};
+        Sprite() = default;
 
     public:
         virtual ~Sprite() = 0;
-        Sprite() {}
-        float getLeft();
+        float getLeft() const;
         void setLeft(float left);
-        float getRight();
+        float getRight() const;
         void setRight(float right);
-        float getTop();
+        float getTop() const;
         void setTop(float top);
-        float getBottom();
+        float getBottom() const;
         void setBottom(float bottom);
 
-        float getWidth();
-        float getHeight();
+        float getWidth() const;
+        float getHeight() const;
     };
 
 }

@@ -1,6 +1,6 @@
 #include "../include/ControllerImpl.hpp"
 
-scs::ControllerImpl::ControllerImpl() {}
+scs::ControllerImpl::ControllerImpl() = default;
 
 void scs::ControllerImpl::onDrawCanvas(sf::RenderWindow* window, scs::Canvas c, sf::Time deltaTime) {
     doUpdateObjects(c, deltaTime);
