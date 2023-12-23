@@ -1,27 +1,22 @@
 #ifndef CONTROLLER_IMPL_HPP_
 #define CONTROLLER_IMPL_HPP_
+
 #include "Controller.hpp"
 #include "Canvas.hpp"
+#include "GameObject.hpp"
 
 namespace scs {
     class ControllerImpl final : public Controller {
-        static void doUpdateObjects(scs::Canvas c, sf::Time deltaTime);
+        void doUpdateObjects(const scs::Canvas &c, sf::Time deltaTime) const;
+        void doRenderObjects(sf::RenderWindow* window, const scs::Canvas &c) const;
 
-        static void doRenderObjects(sf::RenderWindow* window, scs::Canvas c);
+        std::vector<scs::GameObject*> objects{};
+        int objectsCount{};
 
     public:
-        ControllerImpl();
+        void onInitFrame() override;
         void onDrawCanvas(sf::RenderWindow* window, scs::Canvas c, sf::Time deltaTime) override;
     };
 }
 
 #endif
-
-/*
-    private CommonObject[] objects = new CommonObject[1];
-    private int objectsCount;
-
-    private void initApplication() {
-        addObjects(new Background());
-    }
-*/

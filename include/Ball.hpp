@@ -21,8 +21,8 @@ namespace scs
         Ball();
         Ball(float x, float y);
 
-        void onUpdate(scs::Canvas canvas, sf::Time deltaTime) override;
-        void onRender(sf::RenderWindow* window, scs::Canvas c) override;
+        void onUpdate(const scs::Canvas& canvas, sf::Time deltaTime) override;
+        void onRender(sf::RenderWindow* window, const scs::Canvas& c) override;
 
     };
 }

@@ -19,7 +19,7 @@ scs::Ball::Ball(const float x, const float y) : Ball()
     this->y = y;
 }
 
-void scs::Ball::onUpdate(scs::Canvas canvas, const sf::Time deltaTime)
+void scs::Ball::onUpdate(const scs::Canvas& canvas, const sf::Time deltaTime)
 {
     // in SFML can be replaced by move(float, float)
     x += vX * deltaTime.asSeconds();
@@ -47,7 +47,7 @@ void scs::Ball::onUpdate(scs::Canvas canvas, const sf::Time deltaTime)
     }
 }
 
-void scs::Ball::onRender(sf::RenderWindow *window, scs::Canvas c)
+void scs::Ball::onRender(sf::RenderWindow *window, const scs::Canvas& c)
 {
     myShape->setFillColor(*color);
     myShape->setPosition(x, y);

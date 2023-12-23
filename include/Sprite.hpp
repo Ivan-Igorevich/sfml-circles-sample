@@ -14,18 +14,17 @@ namespace scs
         Sprite() = default;
 
     public:
-        virtual ~Sprite() = 0;
-        float getLeft() const;
+        [[nodiscard]] float getLeft() const;
         void setLeft(float left);
-        float getRight() const;
+        [[nodiscard]] float getRight() const;
         void setRight(float right);
-        float getTop() const;
+        [[nodiscard]] float getTop() const;
         void setTop(float top);
-        float getBottom() const;
+        [[nodiscard]] float getBottom() const;
         void setBottom(float bottom);
 
-        float getWidth() const;
-        float getHeight() const;
+        [[nodiscard]] float getWidth() const;
+        [[nodiscard]] float getHeight() const;
     };
 
 }

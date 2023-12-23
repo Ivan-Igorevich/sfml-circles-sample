@@ -9,10 +9,8 @@ namespace scs
 
     class Controller
     {
-    protected:
-        ~Controller() = default;
-
     public:
+        virtual void onInitFrame() = 0;
         virtual void onDrawCanvas(sf::RenderWindow* window, scs::Canvas c, sf::Time deltaTime) = 0;
     };
 }
